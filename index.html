@@ -3,96 +3,521 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Somos Nexo Integral</title>
+
+<title>Somos Nexo Integral | Soluciones tecnológicas para negocios</title>
+
+<meta name="description" content="Soluciones tecnológicas y herramientas de control para emprendedores, negocios y organizaciones. Transformamos ideas en soluciones reales.">
 
 <style>
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fb;
-    color:#222;
+    background:#f5f7fb;
+    color:#1f2937;
+    line-height:1.6;
 }
-header{
+
+/* NAVEGACIÓN */
+
+nav{
+    background:#0F172A;
+    color:white;
+    padding:16px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#38BDF8;
+}
+
+/* PORTADA */
+
+.hero{
+    background:linear-gradient(135deg,#0F172A,#172554);
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin:0 0 10px;
+}
+
+.hero h2{
+    color:#38BDF8;
+    font-size:30px;
+    margin:0 0 20px;
+    font-weight:normal;
+}
+
+.hero p{
+    max-width:750px;
+    margin:0 auto 32px;
+    font-size:19px;
+    color:#dbeafe;
+}
+
+.btn{
+    display:inline-block;
+    background:#38BDF8;
+    color:#082f49;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* SECCIONES */
+
+section{
+    max-width:1150px;
+    margin:auto;
+    padding:75px 25px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:34px;
+    margin-bottom:10px;
+    color:#0F172A;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#64748b;
+}
+
+/* PROBLEMA */
+
+.problem{
+    text-align:center;
+}
+
+.problem h2{
+    font-size:34px;
+    color:#0F172A;
+}
+
+.problem p{
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* SERVICIOS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:14px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(15,23,42,.08);
+    border:1px solid #e5e7eb;
+}
+
+.card h3{
+    color:#0F172A;
+    font-size:23px;
+    margin-top:0;
+}
+
+.card p{
+    color:#64748b;
+}
+
+.card strong{
+    color:#0F172A;
+}
+
+/* BENEFICIOS */
+
+.benefits{
+    background:#eaf4ff;
+    max-width:none;
+}
+
+.benefits-inner{
+    max-width:1100px;
+    margin:auto;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.benefit{
+    background:white;
+    padding:25px 15px;
+    border-radius:12px;
+}
+
+.benefit h3{
+    color:#0F172A;
+}
+
+/* NOSOTROS */
+
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:850px;
+    margin:15px auto;
+    font-size:17px;
+}
+
+/* CTA */
+
+.cta{
+    max-width:none;
     background:#0F172A;
     color:white;
     text-align:center;
-    padding:80px 20px;
 }
-header h1{
-    font-size:48px;
-    margin-bottom:10px;
+
+.cta h2{
+    font-size:34px;
+    margin-top:0;
 }
-header h2{
-    color:#38BDF8;
-    font-weight:normal;
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 28px;
+    color:#cbd5e1;
 }
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
+
+/* WHATSAPP FLOTANTE */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    background:#25D366;
+    color:white;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    z-index:1000;
 }
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-.card{
-    background:white;
-    border-radius:12px;
-    padding:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
+
+/* FOOTER */
+
 footer{
     background:#111827;
-    color:white;
+    color:#cbd5e1;
     text-align:center;
-    padding:30px;
+    padding:30px 20px;
 }
-</style>
 
+/* CELULARES */
+
+@media(max-width:850px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .benefit-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin:0 8px;
+    }
+}
+
+@media(max-width:500px){
+
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:75px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
+<nav>
+
+<div class="logo">Somos Nexo Integral</div>
+
+<div>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</nav>
+
+
+<header class="hero">
+
 <h1>Somos Nexo Integral</h1>
+
 <h2>Transformamos ideas en soluciones reales.</h2>
-<p>Desarrollamos herramientas tecnológicas, sistemas de control y soluciones integrales para emprendedores y organizaciones.</p>
+
+<p>
+Creamos herramientas tecnológicas y soluciones prácticas para ayudar a
+emprendedores, negocios y organizaciones a organizar sus procesos,
+controlar mejor su información y tomar mejores decisiones.
+</p>
+
+<a class="btn"
+href="https://wa.me/59892953184?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Somos%20Nexo%20Integral."
+target="_blank">
+Hablemos de tu proyecto
+</a>
+
 </header>
 
-<section>
-<h2>Nuestros servicios</h2>
+
+<section class="problem">
+
+<h2>¿Tu negocio necesita más control y organización?</h2>
+
+<p>
+Ventas, gastos, inventarios, créditos, cartera y procesos administrativos
+pueden convertirse rápidamente en información difícil de manejar.
+En Somos Nexo Integral analizamos cada necesidad y desarrollamos
+herramientas sencillas que permiten organizar la información y convertirla
+en datos útiles para trabajar y decidir mejor.
+</p>
+
+</section>
+
+
+<section id="servicios">
+
+<div class="section-title">
+
+<h2>Nuestras soluciones</h2>
+
+<p>
+Tecnología diseñada a partir de necesidades reales.
+</p>
+
+</div>
+
 
 <div class="cards">
 
 <div class="card">
+
 <h3>Pagadiario</h3>
-<p>Administración inteligente de créditos diarios, recaudo y reportes.</p>
-</div>
 
-<div class="card">
-<h3>Nexo Control</h3>
-<p>Control de ventas, gastos, inventario y finanzas para emprendedores.</p>
-</div>
-
-<div class="card">
-<h3>Soluciones a Medida</h3>
-<p>Diseño y desarrollo de herramientas tecnológicas adaptadas a cada necesidad.</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2>Nuestra filosofía</h2>
 <p>
-En Somos Nexo Integral creemos que toda gran solución comienza con una idea.
-Nuestro compromiso es convertir necesidades reales en herramientas útiles, prácticas y sostenibles.
+Herramienta para la administración de créditos y cobros diarios.
+Permite organizar clientes, préstamos, cuotas, recaudos y saldos pendientes.
 </p>
+
+<strong>Control de cartera · Cobros · Créditos · Reportes</strong>
+
+</div>
+
+
+<div class="card">
+
+<h3>Nexo Control</h3>
+
+<p>
+Sistema de control administrativo pensado para emprendedores y pequeños
+negocios que necesitan conocer con claridad lo que venden, gastan y tienen.
+</p>
+
+<strong>Ventas · Gastos · Inventario · Finanzas</strong>
+
+</div>
+
+
+<div class="card">
+
+<h3>Soluciones a Medida</h3>
+
+<p>
+Analizamos procesos y necesidades particulares para diseñar herramientas
+digitales adaptadas a la forma de trabajar de cada cliente.
+</p>
+
+<strong>Automatización · Control · Desarrollo · Optimización</strong>
+
+</div>
+
+</div>
+
 </section>
+
+
+<section class="benefits">
+
+<div class="benefits-inner">
+
+<div class="section-title">
+
+<h2>¿Qué buscamos mejorar?</h2>
+
+<p>
+La tecnología tiene valor cuando ayuda a resolver problemas concretos.
+</p>
+
+</div>
+
+
+<div class="benefit-grid">
+
+<div class="benefit">
+<h3>Más control</h3>
+<p>Información organizada y disponible cuando la necesitas.</p>
+</div>
+
+<div class="benefit">
+<h3>Menos tiempo</h3>
+<p>Reducimos tareas repetitivas y procesos innecesarios.</p>
+</div>
+
+<div class="benefit">
+<h3>Mejores decisiones</h3>
+<p>Datos claros para comprender mejor tu actividad.</p>
+</div>
+
+<div class="benefit">
+<h3>Soluciones prácticas</h3>
+<p>Herramientas pensadas para funcionar en situaciones reales.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="nosotros" class="about">
+
+<div class="section-title">
+
+<h2>Somos Nexo Integral</h2>
+
+</div>
+
+<p>
+Creemos que toda gran solución comienza con una idea.
+Nuestro trabajo consiste en entender una necesidad, analizarla con criterio
+y convertirla en una herramienta útil, práctica y sostenible.
+</p>
+
+<p>
+Trabajamos con innovación, simplicidad y responsabilidad, porque entendemos
+que la tecnología solo tiene verdadero valor cuando mejora la vida y el
+trabajo de las personas.
+</p>
+
+</section>
+
+
+<section id="contacto" class="cta">
+
+<h2>¿Tienes una necesidad que podemos convertir en una solución?</h2>
+
+<p>
+Cuéntanos qué necesitas mejorar, controlar o automatizar.
+Analizaremos tu caso y exploraremos una solución adecuada para tu proyecto
+o negocio.
+</p>
+
+<a class="btn"
+href="https://wa.me/59892953184?text=Hola%2C%20quiero%20conversar%20sobre%20una%20soluci%C3%B3n%20para%20mi%20negocio%20o%20proyecto."
+target="_blank">
+Contactar por WhatsApp
+</a>
+
+</section>
+
 
 <footer>
+
 © 2026 Somos Nexo Integral · Transformamos ideas en soluciones reales.
+
 </footer>
+
+
+<a class="whatsapp"
+href="https://wa.me/59892953184?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Somos%20Nexo%20Integral."
+target="_blank"
+aria-label="Contactar por WhatsApp">
+&#9742;
+</a>
+
 
 </body>
 </html>
