@@ -1,523 +1,813 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Somos Nexo Integral | Soluciones tecnológicas para negocios</title>
+    <meta charset="UTF-8">
 
-<meta name="description" content="Soluciones tecnológicas y herramientas de control para emprendedores, negocios y organizaciones. Transformamos ideas en soluciones reales.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>
+        Somos Nexo Integral | Software, gestión y soluciones tecnológicas
+    </title>
 
-*{
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+    <meta name="description"
+          content="Soluciones tecnológicas para emprendedores, negocios y organizaciones. Control de ventas, gastos, inventario, créditos, cobranzas, automatización y desarrollo de software a medida.">
 
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fb;
-    color:#1f2937;
-    line-height:1.6;
-}
+    <meta name="theme-color"
+          content="#081F3B">
 
-/* NAVEGACIÓN */
+    <link rel="canonical"
+          href="https://somosnexointegral.com/">
 
-nav{
-    background:#0F172A;
-    color:white;
-    padding:16px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+    <link rel="stylesheet"
+          href="styles.css">
 
-.logo{
-    font-size:21px;
-    font-weight:bold;
-}
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:22px;
-    font-size:15px;
-}
+    <!-- DATOS ESTRUCTURADOS PARA BUSCADORES -->
 
-nav a:hover{
-    color:#38BDF8;
-}
-
-/* PORTADA */
-
-.hero{
-    background:linear-gradient(135deg,#0F172A,#172554);
-    color:white;
-    text-align:center;
-    padding:100px 20px;
-}
-
-.hero h1{
-    font-size:52px;
-    margin:0 0 10px;
-}
-
-.hero h2{
-    color:#38BDF8;
-    font-size:30px;
-    margin:0 0 20px;
-    font-weight:normal;
-}
-
-.hero p{
-    max-width:750px;
-    margin:0 auto 32px;
-    font-size:19px;
-    color:#dbeafe;
-}
-
-.btn{
-    display:inline-block;
-    background:#38BDF8;
-    color:#082f49;
-    padding:14px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.2s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-/* SECCIONES */
-
-section{
-    max-width:1150px;
-    margin:auto;
-    padding:75px 25px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-title h2{
-    font-size:34px;
-    margin-bottom:10px;
-    color:#0F172A;
-}
-
-.section-title p{
-    max-width:700px;
-    margin:auto;
-    color:#64748b;
-}
-
-/* PROBLEMA */
-
-.problem{
-    text-align:center;
-}
-
-.problem h2{
-    font-size:34px;
-    color:#0F172A;
-}
-
-.problem p{
-    max-width:800px;
-    margin:auto;
-    font-size:18px;
-}
-
-/* SERVICIOS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:14px;
-    padding:30px;
-    box-shadow:0 5px 20px rgba(15,23,42,.08);
-    border:1px solid #e5e7eb;
-}
-
-.card h3{
-    color:#0F172A;
-    font-size:23px;
-    margin-top:0;
-}
-
-.card p{
-    color:#64748b;
-}
-
-.card strong{
-    color:#0F172A;
-}
-
-/* BENEFICIOS */
-
-.benefits{
-    background:#eaf4ff;
-    max-width:none;
-}
-
-.benefits-inner{
-    max-width:1100px;
-    margin:auto;
-}
-
-.benefit-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    text-align:center;
-}
-
-.benefit{
-    background:white;
-    padding:25px 15px;
-    border-radius:12px;
-}
-
-.benefit h3{
-    color:#0F172A;
-}
-
-/* NOSOTROS */
-
-.about{
-    text-align:center;
-}
-
-.about p{
-    max-width:850px;
-    margin:15px auto;
-    font-size:17px;
-}
-
-/* CTA */
-
-.cta{
-    max-width:none;
-    background:#0F172A;
-    color:white;
-    text-align:center;
-}
-
-.cta h2{
-    font-size:34px;
-    margin-top:0;
-}
-
-.cta p{
-    max-width:700px;
-    margin:0 auto 28px;
-    color:#cbd5e1;
-}
-
-/* WHATSAPP FLOTANTE */
-
-.whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    background:#25D366;
-    color:white;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-size:28px;
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
-    z-index:1000;
-}
-
-/* FOOTER */
-
-footer{
-    background:#111827;
-    color:#cbd5e1;
-    text-align:center;
-    padding:30px 20px;
-}
-
-/* CELULARES */
-
-@media(max-width:850px){
-
-    .cards{
-        grid-template-columns:1fr;
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Somos Nexo Integral",
+      "url": "https://somosnexointegral.com/",
+      "description": "Soluciones tecnológicas, software de gestión, automatización y desarrollo a medida.",
+      "telephone": "+59892953184"
     }
+    </script>
 
-    .benefit-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .hero h1{
-        font-size:39px;
-    }
-
-    .hero h2{
-        font-size:24px;
-    }
-
-    nav{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    nav a{
-        margin:0 8px;
-    }
-}
-
-@media(max-width:500px){
-
-    .benefit-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero{
-        padding:75px 20px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-}
-
-</style>
 </head>
+
 
 <body>
 
-<nav>
 
-<div class="logo">Somos Nexo Integral</div>
+<!-- ======================================================
+     NAVEGACIÓN
+     ====================================================== -->
 
-<div>
-<a href="#servicios">Servicios</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#contacto">Contacto</a>
-</div>
+<header class="site-header">
 
-</nav>
+    <div class="container navbar">
+
+        <a href="#inicio"
+           class="brand">
+
+            <div class="brand-symbol">
+                N
+            </div>
+
+            <div class="brand-text">
+
+                <span class="brand-small">
+                    SOMOS
+                </span>
+
+                <span class="brand-name">
+                    NEXO INTEGRAL
+                </span>
+
+            </div>
+
+        </a>
 
 
-<header class="hero">
+        <nav class="nav-links"
+             aria-label="Navegación principal">
 
-<h1>Somos Nexo Integral</h1>
+            <a href="#inicio">
+                Inicio
+            </a>
 
-<h2>Transformamos ideas en soluciones reales.</h2>
+            <a href="#soluciones">
+                Soluciones
+            </a>
 
-<p>
-Creamos herramientas tecnológicas y soluciones prácticas para ayudar a
-emprendedores, negocios y organizaciones a organizar sus procesos,
-controlar mejor su información y tomar mejores decisiones.
-</p>
+            <a href="#diferencia">
+                Por qué Nexo
+            </a>
 
-<a class="btn"
-href="https://wa.me/59892953184?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Somos%20Nexo%20Integral."
-target="_blank">
-Hablemos de tu proyecto
-</a>
+            <a href="#contacto"
+               class="nav-contact">
+                Hablemos
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
-<section class="problem">
 
-<h2>¿Tu negocio necesita más control y organización?</h2>
+<main>
 
-<p>
-Ventas, gastos, inventarios, créditos, cartera y procesos administrativos
-pueden convertirse rápidamente en información difícil de manejar.
-En Somos Nexo Integral analizamos cada necesidad y desarrollamos
-herramientas sencillas que permiten organizar la información y convertirla
-en datos útiles para trabajar y decidir mejor.
-</p>
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="hero"
+         id="inicio">
+
+    <div class="container hero-grid">
+
+        <div class="hero-copy reveal">
+
+            <span class="eyebrow">
+                Tecnología para negocios reales
+            </span>
+
+
+            <h1>
+
+                Tecnología para tener
+                el <span>control</span>
+                de tu negocio.
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Organiza tus ventas, gastos, inventario,
+                cartera y procesos.
+
+                Cuando una herramienta estándar no alcanza,
+                desarrollamos la solución que tu negocio
+                necesita.
+
+            </p>
+
+
+            <div class="button-group">
+
+                <a href="#soluciones"
+                   class="btn btn-primary">
+
+                    Conocer nuestras soluciones
+                    →
+
+                </a>
+
+
+                <a href="https://wa.me/59892953184?text=Hola%2C%20quiero%20contarles%20una%20necesidad%20de%20mi%20negocio%20o%20proyecto."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+
+                    Cuéntanos qué necesitas
+
+                </a>
+
+            </div>
+
+
+
+            <div class="hero-benefits">
+
+
+                <div class="hero-benefit">
+
+                    <div class="hero-benefit-icon">
+                        ✓
+                    </div>
+
+                    <span>
+                        Más control<br>
+                        de tu información
+                    </span>
+
+                </div>
+
+
+                <div class="hero-benefit">
+
+                    <div class="hero-benefit-icon">
+                        ⏱
+                    </div>
+
+                    <span>
+                        Menos tiempo<br>
+                        en tareas manuales
+                    </span>
+
+                </div>
+
+
+                <div class="hero-benefit">
+
+                    <div class="hero-benefit-icon">
+                        ↗
+                    </div>
+
+                    <span>
+                        Mejores decisiones<br>
+                        con datos reales
+                    </span>
+
+                </div>
+
+
+                <div class="hero-benefit">
+
+                    <div class="hero-benefit-icon">
+                        ◇
+                    </div>
+
+                    <span>
+                        Soluciones adaptadas<br>
+                        a tu necesidad
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- VISUAL TIPO SOFTWARE -->
+
+        <div class="product-visual reveal">
+
+            <div class="dashboard-mockup">
+
+                <div class="mockup-bar">
+
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+
+                </div>
+
+
+                <div class="dashboard-content">
+
+                    <div class="dashboard-top">
+
+                        Nexo Control
+                        ·
+                        Panel de gestión
+
+                    </div>
+
+
+                    <div class="dashboard-cards">
+
+
+                        <div class="dashboard-card">
+
+                            <small>
+                                Ventas
+                            </small>
+
+                            <strong>
+                                $24.850
+                            </strong>
+
+                        </div>
+
+
+                        <div class="dashboard-card">
+
+                            <small>
+                                Gastos
+                            </small>
+
+                            <strong>
+                                $8.300
+                            </strong>
+
+                        </div>
+
+
+                        <div class="dashboard-card">
+
+                            <small>
+                                Inventario
+                            </small>
+
+                            <strong>
+                                152
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-chart">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section id="servicios">
 
-<div class="section-title">
+<!-- ======================================================
+     SOLUCIONES
+     ====================================================== -->
 
-<h2>Nuestras soluciones</h2>
+<section class="section section-light"
+         id="soluciones">
 
-<p>
-Tecnología diseñada a partir de necesidades reales.
-</p>
-
-</div>
+    <div class="container">
 
 
-<div class="cards">
+        <div class="section-heading reveal">
 
-<div class="card">
+            <span>
+                Nuestras soluciones
+            </span>
 
-<h3>Pagadiario</h3>
+            <h2>
+                Tecnología pensada para resolver problemas reales
+            </h2>
 
-<p>
-Herramienta para la administración de créditos y cobros diarios.
-Permite organizar clientes, préstamos, cuotas, recaudos y saldos pendientes.
-</p>
+            <p>
 
-<strong>Control de cartera · Cobros · Créditos · Reportes</strong>
+                Herramientas prácticas para emprendedores,
+                pequeños negocios y organizaciones que necesitan
+                mayor control, claridad y eficiencia.
 
-</div>
+            </p>
 
-
-<div class="card">
-
-<h3>Nexo Control</h3>
-
-<p>
-Sistema de control administrativo pensado para emprendedores y pequeños
-negocios que necesitan conocer con claridad lo que venden, gastan y tienen.
-</p>
-
-<strong>Ventas · Gastos · Inventario · Finanzas</strong>
-
-</div>
+        </div>
 
 
-<div class="card">
 
-<h3>Soluciones a Medida</h3>
+        <div class="solutions-grid">
 
-<p>
-Analizamos procesos y necesidades particulares para diseñar herramientas
-digitales adaptadas a la forma de trabajar de cada cliente.
-</p>
 
-<strong>Automatización · Control · Desarrollo · Optimización</strong>
+            <!-- NEXO CONTROL -->
 
-</div>
+            <article class="solution-card reveal">
 
-</div>
+                <div class="solution-icon">
+                    ▥
+                </div>
+
+
+                <h3>
+                    Nexo Control
+                </h3>
+
+
+                <p>
+
+                    Control administrativo para emprendedores
+                    y negocios que necesitan comprender mejor
+                    lo que venden, gastan y tienen.
+
+                </p>
+
+
+                <ul class="feature-list">
+
+                    <li>
+                        Control de ventas
+                    </li>
+
+                    <li>
+                        Registro de gastos
+                    </li>
+
+                    <li>
+                        Gestión de inventario
+                    </li>
+
+                    <li>
+                        Información financiera organizada
+                    </li>
+
+                </ul>
+
+
+                <a href="https://wa.me/59892953184?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Nexo%20Control."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="card-link">
+
+                    Conocer Nexo Control →
+
+                </a>
+
+            </article>
+
+
+
+            <!-- PAGADIARIO -->
+
+            <article class="solution-card reveal">
+
+                <div class="solution-icon">
+                    $
+                </div>
+
+
+                <h3>
+                    Pagadiario
+                </h3>
+
+
+                <p>
+
+                    Herramienta para organizar créditos,
+                    clientes, cuotas, recaudos y saldos
+                    pendientes desde un solo lugar.
+
+                </p>
+
+
+                <ul class="feature-list">
+
+                    <li>
+                        Gestión de créditos
+                    </li>
+
+                    <li>
+                        Control de clientes
+                    </li>
+
+                    <li>
+                        Cobros y recaudos
+                    </li>
+
+                    <li>
+                        Cartera y reportes
+                    </li>
+
+                </ul>
+
+
+                <a href="https://wa.me/59892953184?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Pagadiario."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="card-link">
+
+                    Conocer Pagadiario →
+
+                </a>
+
+            </article>
+
+
+
+            <!-- SOLUCIONES A MEDIDA -->
+
+            <article class="solution-card reveal">
+
+                <div class="solution-icon">
+                    ⚙
+                </div>
+
+
+                <h3>
+                    Soluciones a Medida
+                </h3>
+
+
+                <p>
+
+                    Cuando un negocio tiene una necesidad
+                    particular, analizamos su proceso y
+                    desarrollamos una herramienta adaptada
+                    a su forma de trabajar.
+
+                </p>
+
+
+                <ul class="feature-list">
+
+                    <li>
+                        Desarrollo de software
+                    </li>
+
+                    <li>
+                        Automatización de procesos
+                    </li>
+
+                    <li>
+                        Sistemas de control
+                    </li>
+
+                    <li>
+                        Herramientas personalizadas
+                    </li>
+
+                </ul>
+
+
+                <a href="https://wa.me/59892953184?text=Hola%2C%20tengo%20una%20idea%20o%20necesidad%20y%20quiero%20conversar%20sobre%20una%20soluci%C3%B3n%20a%20medida."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="card-link">
+
+                    Cuéntanos tu proyecto →
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section class="benefits">
 
-<div class="benefits-inner">
+<!-- ======================================================
+     DIFERENCIADORES
+     ====================================================== -->
 
-<div class="section-title">
+<section class="section"
+         id="diferencia">
 
-<h2>¿Qué buscamos mejorar?</h2>
-
-<p>
-La tecnología tiene valor cuando ayuda a resolver problemas concretos.
-</p>
-
-</div>
+    <div class="container">
 
 
-<div class="benefit-grid">
+        <div class="section-heading reveal">
 
-<div class="benefit">
-<h3>Más control</h3>
-<p>Información organizada y disponible cuando la necesitas.</p>
-</div>
+            <span>
+                Nuestra forma de trabajar
+            </span>
 
-<div class="benefit">
-<h3>Menos tiempo</h3>
-<p>Reducimos tareas repetitivas y procesos innecesarios.</p>
-</div>
+            <h2>
+                No empezamos por la tecnología.
+                Empezamos por el problema.
+            </h2>
 
-<div class="benefit">
-<h3>Mejores decisiones</h3>
-<p>Datos claros para comprender mejor tu actividad.</p>
-</div>
+            <p>
 
-<div class="benefit">
-<h3>Soluciones prácticas</h3>
-<p>Herramientas pensadas para funcionar en situaciones reales.</p>
-</div>
+                Entendemos primero qué necesitas resolver.
+                Después definimos la herramienta adecuada
+                y la convertimos en una solución práctica.
 
-</div>
+            </p>
 
-</div>
+        </div>
+
+
+
+        <div class="values-grid">
+
+
+            <div class="value-item reveal">
+
+                <div class="value-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    Entendemos
+                </h3>
+
+                <p>
+                    Analizamos la necesidad y cómo funciona
+                    actualmente tu proceso.
+                </p>
+
+            </div>
+
+
+
+            <div class="value-item reveal">
+
+                <div class="value-icon">
+                    ↔
+                </div>
+
+                <h3>
+                    Conectamos
+                </h3>
+
+                <p>
+                    Unimos información, personas y procesos
+                    para crear una solución coherente.
+                </p>
+
+            </div>
+
+
+
+            <div class="value-item reveal">
+
+                <div class="value-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Construimos
+                </h3>
+
+                <p>
+                    Convertimos la necesidad en una herramienta
+                    útil y fácil de utilizar.
+                </p>
+
+            </div>
+
+
+
+            <div class="value-item reveal">
+
+                <div class="value-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Mejoramos
+                </h3>
+
+                <p>
+                    Buscamos que la tecnología ayude a trabajar,
+                    controlar y decidir mejor.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section id="nosotros" class="about">
 
-<div class="section-title">
+<!-- ======================================================
+     IDENTIDAD / PROPÓSITO
+     ====================================================== -->
 
-<h2>Somos Nexo Integral</h2>
+<section class="section section-light">
 
-</div>
-
-<p>
-Creemos que toda gran solución comienza con una idea.
-Nuestro trabajo consiste en entender una necesidad, analizarla con criterio
-y convertirla en una herramienta útil, práctica y sostenible.
-</p>
-
-<p>
-Trabajamos con innovación, simplicidad y responsabilidad, porque entendemos
-que la tecnología solo tiene verdadero valor cuando mejora la vida y el
-trabajo de las personas.
-</p>
-
-</section>
+    <div class="container">
 
 
-<section id="contacto" class="cta">
+        <div class="section-heading reveal">
 
-<h2>¿Tienes una necesidad que podemos convertir en una solución?</h2>
+            <span>
+                Somos Nexo Integral
+            </span>
 
-<p>
-Cuéntanos qué necesitas mejorar, controlar o automatizar.
-Analizaremos tu caso y exploraremos una solución adecuada para tu proyecto
-o negocio.
-</p>
+            <h2>
+                Conectamos ideas con soluciones
+            </h2>
 
-<a class="btn"
-href="https://wa.me/59892953184?text=Hola%2C%20quiero%20conversar%20sobre%20una%20soluci%C3%B3n%20para%20mi%20negocio%20o%20proyecto."
-target="_blank">
-Contactar por WhatsApp
-</a>
+            <p>
+
+                Creemos que toda gran solución comienza
+                entendiendo correctamente una necesidad.
+
+                Conectamos ideas, información, procesos
+                y tecnología para convertir problemas reales
+                en herramientas útiles, prácticas y sostenibles.
+
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<footer>
 
-© 2026 Somos Nexo Integral · Transformamos ideas en soluciones reales.
+<!-- ======================================================
+     CTA FINAL
+     ====================================================== -->
+
+<section class="cta-section"
+         id="contacto">
+
+    <div class="container reveal">
+
+
+        <h2>
+            ¿Tienes una necesidad que podemos convertir en una solución?
+        </h2>
+
+
+        <p>
+
+            Cuéntanos qué necesitas controlar, organizar,
+            automatizar o mejorar.
+
+            Analizamos tu caso y exploramos contigo
+            la solución más adecuada.
+
+        </p>
+
+
+        <a href="https://wa.me/59892953184?text=Hola%2C%20quiero%20conversar%20sobre%20una%20soluci%C3%B3n%20para%20mi%20negocio%20o%20proyecto."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary">
+
+            Contactar por WhatsApp →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+     ====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="footer-brand">
+                Somos Nexo Integral
+            </div>
+
+            <small>
+                Transformamos ideas en soluciones reales.
+            </small>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#soluciones">
+                Soluciones
+            </a>
+
+            <a href="#diferencia">
+                Nosotros
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </div>
+
+
+        <small>
+
+            ©
+            <span id="current-year"></span>
+            Somos Nexo Integral
+
+        </small>
+
+    </div>
 
 </footer>
 
 
-<a class="whatsapp"
-href="https://wa.me/59892953184?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Somos%20Nexo%20Integral."
-target="_blank"
-aria-label="Contactar por WhatsApp">
-&#9742;
+
+<!-- ======================================================
+     WHATSAPP FLOTANTE
+     ====================================================== -->
+
+<a href="https://wa.me/59892953184?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Somos%20Nexo%20Integral."
+   target="_blank"
+   rel="noopener noreferrer"
+   class="whatsapp-float"
+   aria-label="Contactar a Somos Nexo Integral por WhatsApp">
+
+    ☎
+
 </a>
 
 
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
